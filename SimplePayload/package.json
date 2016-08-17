@@ -1,0 +1,12 @@
+{
+  "name": "simple-payload-bubble",
+  "version": "1.0.0",
+  "description": "Simple Payload Cola Bubble",
+  "main": "index.js",
+  "author": "Cola, Inc.",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "flow-bin": "^0.25.0"
+  }
+}
