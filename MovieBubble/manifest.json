@@ -1,0 +1,19 @@
+{
+  "format" : 1,
+  "identifier" : "com.yourcompany.MovieNight",
+  "version" : 1,
+  "name" : "Movie Night",
+  "style" : "default",
+  "access": {
+    "services" : {
+      "io.cola.collaborative-payload" : {
+        "version" : 1
+      }
+    }
+  },
+  "icons" : {
+    "22px" : "resources/icon_22px.png",
+    "44px" : "resources/icon_44px.png",
+    "66px" : "resources/icon_66px.png"
+  }
+}
