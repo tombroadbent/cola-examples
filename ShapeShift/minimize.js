@@ -23,15 +23,19 @@ var Minimize = React.createClass({
   onLayout: function(event) {
     var {x, y, width, height} = event.nativeEvent.layout
 
-    if (this._timeout) {
-      this.clearTimeout(this._timeout)
+    if (!this.didAdjust) {
+      this.didAdjust = true
+
+      if (this._timeout) {
+        this.clearTimeout(this._timeout)
+      }
+      this._timeout = this.setTimeout(() => {
+        var mod = Math.floor((Math.random() * 100)) + 100
+        this.setState({ size: {width: width+mod, height: height+mod} }, () => {
+          Bubble.setPreferredSize(this.state.size.width, this.state.size.height)
+        })
+      }, 500)
     }
-    this._timeout = this.setTimeout(() => {
-      var off = (height < 200 ? 10 : -80)
-      this.setState({ size: {width: width, height: height+off} }, () => {
-        Bubble.setPreferredSize(this.state.size.width, this.state.size.height)
-      })
-    }, 500)
   },
 
 	render: function() {
