@@ -4,8 +4,7 @@
 const React = require('react')
 var {
   Dimensions,
-
-  ScrollView,
+  View,
   Text
 } = require('react-native')
 import TimerMixin from 'react-timer-mixin'
@@ -29,9 +28,9 @@ var Compose = React.createClass({
 	render: function() {
 
 		return (
-      <ScrollView style={{flex: 1, flexDirection: 'column'}} contentContainerStyle={{justifyContent: 'flex-start', alignItems: 'stretch'}}>
-        <Text style={this.props.styles.text}>Shape Shifter</Text>
-      </ScrollView>
+      <View style={{flex: 1, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', margin: 10}}>
+        <Text style={this.props.styles.text, {fontSize: 28}}>Shape Shifter</Text>
+      </View>
       )
 	}
 })
